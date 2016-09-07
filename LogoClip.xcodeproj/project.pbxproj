@@ -7,45 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F1A1E4C1D7EC87000B19676 /* ZJ_StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A1E4B1D7EC87000B19676 /* ZJ_StringUtils.swift */; };
+		3F88A76E1D7EFC0C0066F6F6 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F88A76C1D7EFC0C0066F6F6 /* MainWindowController.swift */; };
 		3F9272061D7E4BC50065A9C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9272051D7E4BC50065A9C3 /* AppDelegate.swift */; };
 		3F9272081D7E4BC50065A9C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9272071D7E4BC50065A9C3 /* ViewController.swift */; };
 		3F92720A1D7E4BC50065A9C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F9272091D7E4BC50065A9C3 /* Assets.xcassets */; };
 		3F92720D1D7E4BC50065A9C3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F92720B1D7E4BC50065A9C3 /* Main.storyboard */; };
-		3F9272181D7E4BC50065A9C3 /* LogoClipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9272171D7E4BC50065A9C3 /* LogoClipTests.swift */; };
-		3F9272231D7E4BC50065A9C3 /* LogoClipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9272221D7E4BC50065A9C3 /* LogoClipUITests.swift */; };
 		3F9272321D7E5F900065A9C3 /* zj_no_pic@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F9272311D7E5F900065A9C3 /* zj_no_pic@2x.png */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		3F9272141D7E4BC50065A9C3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3F9271FA1D7E4BC50065A9C3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3F9272011D7E4BC50065A9C3;
-			remoteInfo = LogoClip;
-		};
-		3F92721F1D7E4BC50065A9C3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3F9271FA1D7E4BC50065A9C3 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3F9272011D7E4BC50065A9C3;
-			remoteInfo = LogoClip;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		3F9272021D7E4BC50065A9C3 /* LogoClip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LogoClip.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F1A1E4B1D7EC87000B19676 /* ZJ_StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJ_StringUtils.swift; sourceTree = "<group>"; };
+		3F88A76C1D7EFC0C0066F6F6 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
+		3F9272021D7E4BC50065A9C3 /* APP Logo生成器.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "APP Logo生成器.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9272051D7E4BC50065A9C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F9272071D7E4BC50065A9C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3F9272091D7E4BC50065A9C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F92720C1D7E4BC50065A9C3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F92720E1D7E4BC50065A9C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F9272131D7E4BC50065A9C3 /* LogoClipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogoClipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F9272171D7E4BC50065A9C3 /* LogoClipTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoClipTests.swift; sourceTree = "<group>"; };
-		3F9272191D7E4BC50065A9C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3F92721E1D7E4BC50065A9C3 /* LogoClipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogoClipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F9272221D7E4BC50065A9C3 /* LogoClipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoClipUITests.swift; sourceTree = "<group>"; };
-		3F9272241D7E4BC50065A9C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F9272311D7E5F900065A9C3 /* zj_no_pic@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zj_no_pic@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,29 +36,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3F9272101D7E4BC50065A9C3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3F92721B1D7E4BC50065A9C3 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F1A1E4A1D7EC87000B19676 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				3F1A1E4B1D7EC87000B19676 /* ZJ_StringUtils.swift */,
+			);
+			name = Lib;
+			path = ../../../osx/LogoClip/LogoClip/Lib;
+			sourceTree = "<group>";
+		};
 		3F9271F91D7E4BC50065A9C3 = {
 			isa = PBXGroup;
 			children = (
 				3F9272041D7E4BC50065A9C3 /* LogoClip */,
-				3F9272161D7E4BC50065A9C3 /* LogoClipTests */,
-				3F9272211D7E4BC50065A9C3 /* LogoClipUITests */,
 				3F9272031D7E4BC50065A9C3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -87,9 +59,7 @@
 		3F9272031D7E4BC50065A9C3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3F9272021D7E4BC50065A9C3 /* LogoClip.app */,
-				3F9272131D7E4BC50065A9C3 /* LogoClipTests.xctest */,
-				3F92721E1D7E4BC50065A9C3 /* LogoClipUITests.xctest */,
+				3F9272021D7E4BC50065A9C3 /* APP Logo生成器.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,32 +67,16 @@
 		3F9272041D7E4BC50065A9C3 /* LogoClip */ = {
 			isa = PBXGroup;
 			children = (
-				3F9272301D7E5F900065A9C3 /* image */,
 				3F9272051D7E4BC50065A9C3 /* AppDelegate.swift */,
-				3F9272071D7E4BC50065A9C3 /* ViewController.swift */,
 				3F9272091D7E4BC50065A9C3 /* Assets.xcassets */,
-				3F92720B1D7E4BC50065A9C3 /* Main.storyboard */,
+				3F9272301D7E5F900065A9C3 /* image */,
 				3F92720E1D7E4BC50065A9C3 /* Info.plist */,
+				3F1A1E4A1D7EC87000B19676 /* Lib */,
+				3F92720B1D7E4BC50065A9C3 /* Main.storyboard */,
+				3F88A76C1D7EFC0C0066F6F6 /* MainWindowController.swift */,
+				3F9272071D7E4BC50065A9C3 /* ViewController.swift */,
 			);
 			path = LogoClip;
-			sourceTree = "<group>";
-		};
-		3F9272161D7E4BC50065A9C3 /* LogoClipTests */ = {
-			isa = PBXGroup;
-			children = (
-				3F9272171D7E4BC50065A9C3 /* LogoClipTests.swift */,
-				3F9272191D7E4BC50065A9C3 /* Info.plist */,
-			);
-			path = LogoClipTests;
-			sourceTree = "<group>";
-		};
-		3F9272211D7E4BC50065A9C3 /* LogoClipUITests */ = {
-			isa = PBXGroup;
-			children = (
-				3F9272221D7E4BC50065A9C3 /* LogoClipUITests.swift */,
-				3F9272241D7E4BC50065A9C3 /* Info.plist */,
-			);
-			path = LogoClipUITests;
 			sourceTree = "<group>";
 		};
 		3F9272301D7E5F900065A9C3 /* image */ = {
@@ -136,9 +90,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3F9272011D7E4BC50065A9C3 /* LogoClip */ = {
+		3F9272011D7E4BC50065A9C3 /* APP Logo生成器 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3F9272271D7E4BC50065A9C3 /* Build configuration list for PBXNativeTarget "LogoClip" */;
+			buildConfigurationList = 3F9272271D7E4BC50065A9C3 /* Build configuration list for PBXNativeTarget "APP Logo生成器" */;
 			buildPhases = (
 				3F9271FE1D7E4BC50065A9C3 /* Sources */,
 				3F9271FF1D7E4BC50065A9C3 /* Frameworks */,
@@ -148,46 +102,10 @@
 			);
 			dependencies = (
 			);
-			name = LogoClip;
+			name = "APP Logo生成器";
 			productName = LogoClip;
-			productReference = 3F9272021D7E4BC50065A9C3 /* LogoClip.app */;
+			productReference = 3F9272021D7E4BC50065A9C3 /* APP Logo生成器.app */;
 			productType = "com.apple.product-type.application";
-		};
-		3F9272121D7E4BC50065A9C3 /* LogoClipTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3F92722A1D7E4BC50065A9C3 /* Build configuration list for PBXNativeTarget "LogoClipTests" */;
-			buildPhases = (
-				3F92720F1D7E4BC50065A9C3 /* Sources */,
-				3F9272101D7E4BC50065A9C3 /* Frameworks */,
-				3F9272111D7E4BC50065A9C3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3F9272151D7E4BC50065A9C3 /* PBXTargetDependency */,
-			);
-			name = LogoClipTests;
-			productName = LogoClipTests;
-			productReference = 3F9272131D7E4BC50065A9C3 /* LogoClipTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		3F92721D1D7E4BC50065A9C3 /* LogoClipUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3F92722D1D7E4BC50065A9C3 /* Build configuration list for PBXNativeTarget "LogoClipUITests" */;
-			buildPhases = (
-				3F92721A1D7E4BC50065A9C3 /* Sources */,
-				3F92721B1D7E4BC50065A9C3 /* Frameworks */,
-				3F92721C1D7E4BC50065A9C3 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3F9272201D7E4BC50065A9C3 /* PBXTargetDependency */,
-			);
-			name = LogoClipUITests;
-			productName = LogoClipUITests;
-			productReference = 3F92721E1D7E4BC50065A9C3 /* LogoClipUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -201,14 +119,6 @@
 				TargetAttributes = {
 					3F9272011D7E4BC50065A9C3 = {
 						CreatedOnToolsVersion = 7.3.1;
-					};
-					3F9272121D7E4BC50065A9C3 = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = 3F9272011D7E4BC50065A9C3;
-					};
-					3F92721D1D7E4BC50065A9C3 = {
-						CreatedOnToolsVersion = 7.3.1;
-						TestTargetID = 3F9272011D7E4BC50065A9C3;
 					};
 				};
 			};
@@ -225,9 +135,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3F9272011D7E4BC50065A9C3 /* LogoClip */,
-				3F9272121D7E4BC50065A9C3 /* LogoClipTests */,
-				3F92721D1D7E4BC50065A9C3 /* LogoClipUITests */,
+				3F9272011D7E4BC50065A9C3 /* APP Logo生成器 */,
 			);
 		};
 /* End PBXProject section */
@@ -243,20 +151,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3F9272111D7E4BC50065A9C3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3F92721C1D7E4BC50065A9C3 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -266,39 +160,12 @@
 			files = (
 				3F9272081D7E4BC50065A9C3 /* ViewController.swift in Sources */,
 				3F9272061D7E4BC50065A9C3 /* AppDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3F92720F1D7E4BC50065A9C3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3F9272181D7E4BC50065A9C3 /* LogoClipTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3F92721A1D7E4BC50065A9C3 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3F9272231D7E4BC50065A9C3 /* LogoClipUITests.swift in Sources */,
+				3F88A76E1D7EFC0C0066F6F6 /* MainWindowController.swift in Sources */,
+				3F1A1E4C1D7EC87000B19676 /* ZJ_StringUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		3F9272151D7E4BC50065A9C3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3F9272011D7E4BC50065A9C3 /* LogoClip */;
-			targetProxy = 3F9272141D7E4BC50065A9C3 /* PBXContainerItemProxy */;
-		};
-		3F9272201D7E4BC50065A9C3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3F9272011D7E4BC50065A9C3 /* LogoClip */;
-			targetProxy = 3F92721F1D7E4BC50065A9C3 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3F92720B1D7E4BC50065A9C3 /* Main.storyboard */ = {
@@ -418,56 +285,6 @@
 			};
 			name = Release;
 		};
-		3F92722B1D7E4BC50065A9C3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = LogoClipTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.psvmc.LogoClipTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LogoClip.app/Contents/MacOS/LogoClip";
-			};
-			name = Debug;
-		};
-		3F92722C1D7E4BC50065A9C3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = LogoClipTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.psvmc.LogoClipTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LogoClip.app/Contents/MacOS/LogoClip";
-			};
-			name = Release;
-		};
-		3F92722E1D7E4BC50065A9C3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = LogoClipUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.psvmc.LogoClipUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = LogoClip;
-			};
-			name = Debug;
-		};
-		3F92722F1D7E4BC50065A9C3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = LogoClipUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = cn.psvmc.LogoClipUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = LogoClip;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -480,29 +297,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3F9272271D7E4BC50065A9C3 /* Build configuration list for PBXNativeTarget "LogoClip" */ = {
+		3F9272271D7E4BC50065A9C3 /* Build configuration list for PBXNativeTarget "APP Logo生成器" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3F9272281D7E4BC50065A9C3 /* Debug */,
 				3F9272291D7E4BC50065A9C3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		3F92722A1D7E4BC50065A9C3 /* Build configuration list for PBXNativeTarget "LogoClipTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3F92722B1D7E4BC50065A9C3 /* Debug */,
-				3F92722C1D7E4BC50065A9C3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
-		3F92722D1D7E4BC50065A9C3 /* Build configuration list for PBXNativeTarget "LogoClipUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3F92722E1D7E4BC50065A9C3 /* Debug */,
-				3F92722F1D7E4BC50065A9C3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
