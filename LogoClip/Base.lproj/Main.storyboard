@@ -757,7 +757,7 @@
                                                         </constraints>
                                                         <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="wid-Ij-jlJ">
                                                             <font key="font" metaFont="system"/>
-                                                            <string key="title">x1024.jpg,x1024.png,x180.png,x120.png,x512.png,x192.png,x144.png,x96,png,x72.png,x48.png,x256.png,x128.png,x64.png,x32.png,x16.png</string>
+                                                            <string key="title">x1024.jpg,x1024.png,x512.png,x256.png,x192.png,x180.png,x144.png,x128.png,x120.png,x96.png,x72.png,x48.png,x64.png,x32.png,x16.png</string>
                                                             <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                         </textFieldCell>
