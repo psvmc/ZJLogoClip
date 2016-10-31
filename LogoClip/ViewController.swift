@@ -26,37 +26,28 @@ class ViewController: NSViewController {
         chooseImageButton.action = #selector(chooseImage);
         exportButton.action = #selector(exportImage);
         choosePathButton.action = #selector(choosePath);
-        self.exportTextField.editable = false;
+        self.exportTextField.isEditable = false;
 
-        let userDefault = NSUserDefaults.standardUserDefaults();
-        if let exportPath = userDefault.stringForKey("exportPath"){
+        let userDefault = UserDefaults.standard;
+        if let exportPath = userDefault.string(forKey: "exportPath"){
             exportTextField.stringValue = exportPath;
         }
         
-        if let sizeValue = userDefault.stringForKey("sizeValue"){
+        if let sizeValue = userDefault.string(forKey: "sizeValue"){
             sizeTextField.stringValue = sizeValue;
         }
     }
     
 
-
-    override var representedObject: AnyObject? {
-        didSet {
-        
-        }
-    }
-    
-  
-    
     func chooseImage(){
         let picTaker = IKPictureTaker.pictureTaker();
-        picTaker.setValue(false, forKey: IKPictureTakerAllowsEditingKey);
-        picTaker.setValue(false, forKey: IKPictureTakerRemainOpenAfterValidateKey);
-        picTaker.setValue(false, forKey: IKPictureTakerAllowsVideoCaptureKey);
-        picTaker.beginPictureTakerWithDelegate(self, didEndSelector: #selector(pictureTakerDidEnd(_:returnCode:contextInfo:)), contextInfo: nil);
+        picTaker?.setValue(false, forKey: IKPictureTakerAllowsEditingKey);
+        picTaker?.setValue(false, forKey: IKPictureTakerRemainOpenAfterValidateKey);
+        picTaker?.setValue(false, forKey: IKPictureTakerAllowsVideoCaptureKey);
+        picTaker?.begin(withDelegate: self, didEnd: #selector(pictureTakerDidEnd(_:returnCode:contextInfo:)), contextInfo: nil);
     }
     
-    func pictureTakerDidEnd(picker: IKPictureTaker, returnCode: NSInteger, contextInfo: UnsafePointer<Void>) {
+    func pictureTakerDidEnd(_ picker: IKPictureTaker, returnCode: NSInteger, contextInfo: UnsafeRawPointer) {
         
         if let image = picker.outputImage(){
             self.selectImageView.image = image;
@@ -74,11 +65,10 @@ class ViewController: NSViewController {
         panel.allowsMultipleSelection = false;
         let result = panel.runModal();
         if(result == NSFileHandlingPanelOKButton){
-            if let path = panel.URL!.path{
-                self.exportTextField.stringValue = path;
-                let userDefault = NSUserDefaults.standardUserDefaults();
-                userDefault.setObject(path, forKey: "exportPath");
-            }
+            let path = panel.url!.path;
+            self.exportTextField.stringValue = path;
+            let userDefault = UserDefaults.standard;
+            userDefault.set(path, forKey: "exportPath");
             
         }
     }
@@ -106,27 +96,27 @@ class ViewController: NSViewController {
                     }
                     
                     let alert = NSAlert();
-                    alert.alertStyle = NSAlertStyle.InformationalAlertStyle;
+                    alert.alertStyle = NSAlertStyle.informational;
                     alert.messageText = "导出完成！";
                     alert.runModal();
 
-                    let userDefault = NSUserDefaults.standardUserDefaults();
-                    userDefault.setObject(self.sizeTextField.stringValue, forKey: "sizeValue");
+                    let userDefault = UserDefaults.standard;
+                    userDefault.set(self.sizeTextField.stringValue, forKey: "sizeValue");
                 }
                 
             }
             
         }else{
             let alert = NSAlert();
-            alert.alertStyle = NSAlertStyle.InformationalAlertStyle;
+            alert.alertStyle = NSAlertStyle.informational;
             alert.messageText = "图片不能为空！";
             alert.runModal();
         }
     }
     
     
-    func saveFile(image:NSImage,exportPath:String,type:String,fileName:String){
-        let scale = NSScreen.mainScreen()!.backingScaleFactor;
+    func saveFile(_ image:NSImage,exportPath:String,type:String,fileName:String){
+        let scale = NSScreen.main()!.backingScaleFactor;
         let width:Int =  Int(image.size.width) * Int(scale);
         let height:Int = Int(image.size.height) * Int(scale);
         if(type == "png"){
@@ -134,26 +124,26 @@ class ViewController: NSViewController {
             let bits = NSBitmapImageRep(focusedViewRect: NSMakeRect(0, 0, image.size.width, image.size.width));
             image.unlockFocus();
             let imageProps = [NSImageCompressionFactor:0];
-            let imageData = bits?.representationUsingType(NSBitmapImageFileType.NSPNGFileType, properties: imageProps);
-            imageData?.writeToFile("\(exportPath)/\(fileName)_\(width)x\(height).\(type)", atomically: true);
+            let imageData = bits?.representation(using: NSBitmapImageFileType.PNG, properties: imageProps);
+            try? imageData?.write(to: URL(fileURLWithPath: "\(exportPath)/\(fileName)_\(width)x\(height).\(type)"), options: [.atomic]);
         }else if(type == "jpg"){
             image.lockFocus();
             let bits = NSBitmapImageRep(focusedViewRect: NSMakeRect(0, 0, image.size.width, image.size.width));
             image.unlockFocus();
             let imageProps = [NSImageCompressionFactor:0.8];
-            let imageData = bits?.representationUsingType(NSBitmapImageFileType.NSJPEGFileType, properties: imageProps);
-            imageData?.writeToFile("\(exportPath)/\(fileName)_\(width)x\(height).\(type)", atomically: true);
+            let imageData = bits?.representation(using: NSBitmapImageFileType.JPEG, properties: imageProps);
+            try? imageData?.write(to: URL(fileURLWithPath: "\(exportPath)/\(fileName)_\(width)x\(height).\(type)"), options: [.atomic]);
         }
     }
 
-    func resizeImage(sourceImage:NSImage,newSize:NSSize)->NSImage{
-        if(sourceImage.valid){
+    func resizeImage(_ sourceImage:NSImage,newSize:NSSize)->NSImage{
+        if(sourceImage.isValid){
             if (sourceImage.size.width == newSize.width && sourceImage.size.height == newSize.height) {
                 return sourceImage;
             }
         }
         
-        let scale = NSScreen.mainScreen()!.backingScaleFactor;
+        let scale = NSScreen.main()!.backingScaleFactor;
         let ptSize = NSSize(width: newSize.width/scale, height: newSize.height/scale);
         
         let oldRect = NSMakeRect(0.0, 0.0, sourceImage.size.width, sourceImage.size.height);
@@ -161,7 +151,7 @@ class ViewController: NSViewController {
         let newImage = NSImage(size: ptSize);
         
         newImage.lockFocus();
-        sourceImage.drawInRect(newRect, fromRect: oldRect, operation: NSCompositingOperation.CompositeCopy, fraction: 1.0);
+        sourceImage.draw(in: newRect, from: oldRect, operation: NSCompositingOperation.copy, fraction: 1.0);
         newImage.unlockFocus();
         return newImage;
     }

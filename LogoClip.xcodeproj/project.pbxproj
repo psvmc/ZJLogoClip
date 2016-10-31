@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F1A1E4C1D7EC87000B19676 /* ZJ_StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1A1E4B1D7EC87000B19676 /* ZJ_StringUtils.swift */; };
+		3F7CBAD21DC6CF4800EBCA8A /* ZJ_StringUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7CBAD11DC6CF4800EBCA8A /* ZJ_StringUtils.swift */; };
 		3F88A76E1D7EFC0C0066F6F6 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F88A76C1D7EFC0C0066F6F6 /* MainWindowController.swift */; };
 		3F9272061D7E4BC50065A9C3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9272051D7E4BC50065A9C3 /* AppDelegate.swift */; };
 		3F9272081D7E4BC50065A9C3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9272071D7E4BC50065A9C3 /* ViewController.swift */; };
@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3F1A1E4B1D7EC87000B19676 /* ZJ_StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZJ_StringUtils.swift; sourceTree = "<group>"; };
+		3F7CBAD11DC6CF4800EBCA8A /* ZJ_StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZJ_StringUtils.swift; path = LogoClip/Lib/ZJ_StringUtils.swift; sourceTree = SOURCE_ROOT; };
 		3F88A76C1D7EFC0C0066F6F6 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		3F9272021D7E4BC50065A9C3 /* APP Logo生成器.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "APP Logo生成器.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9272051D7E4BC50065A9C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,7 +42,7 @@
 		3F1A1E4A1D7EC87000B19676 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				3F1A1E4B1D7EC87000B19676 /* ZJ_StringUtils.swift */,
+				3F7CBAD11DC6CF4800EBCA8A /* ZJ_StringUtils.swift */,
 			);
 			name = Lib;
 			path = ../../../osx/LogoClip/LogoClip/Lib;
@@ -114,11 +114,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = PSVMC;
 				TargetAttributes = {
 					3F9272011D7E4BC50065A9C3 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -160,8 +161,8 @@
 			files = (
 				3F9272081D7E4BC50065A9C3 /* ViewController.swift in Sources */,
 				3F9272061D7E4BC50065A9C3 /* AppDelegate.swift in Sources */,
+				3F7CBAD21DC6CF4800EBCA8A /* ZJ_StringUtils.swift in Sources */,
 				3F88A76E1D7EFC0C0066F6F6 /* MainWindowController.swift in Sources */,
-				3F1A1E4C1D7EC87000B19676 /* ZJ_StringUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,8 +194,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -238,8 +241,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
@@ -258,6 +263,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 			};
 			name = Release;
 		};
@@ -270,6 +276,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.psvmc.LogoClip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -282,6 +289,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.psvmc.LogoClip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
