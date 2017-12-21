@@ -12,10 +12,10 @@ class MainWindowController: NSWindowController {
 
     override func windowDidLoad() {
         super.windowDidLoad()
-        NotificationCenter.default.addObserver(self, selector: #selector(closeWindow(_:)), name: NSNotification.Name.NSWindowWillClose, object: nil);
+        NotificationCenter.default.addObserver(self, selector: #selector(closeWindow(_:)), name: NSWindow.willCloseNotification, object: nil);
     }
     
-    func closeWindow(_ noti:Notification){
+    @objc func closeWindow(_ noti:Notification){
         if let objWindow = noti.object{
             if(objWindow as? NSObject == self.window){
                 NSApp.terminate(self);

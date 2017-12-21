@@ -89,8 +89,8 @@ class ZJ_StringUtils{
     
     ///获取文件名（a.jpg）
     static func getFileName(_ str:String!) -> String{
-        var arr = str.characters.split{ $0 == "/" }.map { String($0) };
-        return arr[arr.count-1];
+        var arr = str.split(separator: "/");
+        return String(arr[arr.count-1]);
     }
     
     ///获取没有-的uuid字符串
@@ -110,8 +110,7 @@ class ZJ_StringUtils{
     ///分割字符串
     static func splitUTF8StrAllowEmpty(_ str:String,spliter:Character) -> Array<String>{
         let maxSplit = str.lengthOfBytes(using: String.Encoding.utf8);
-        let strArr = str.characters.split(separator: spliter, maxSplits: maxSplit, omittingEmptySubsequences: false).map { String($0) };
-        
+        let strArr = str.split(separator: spliter, maxSplits: maxSplit, omittingEmptySubsequences: false).map { String($0) };
         return strArr;
     }
     
