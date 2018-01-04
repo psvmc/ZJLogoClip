@@ -39,7 +39,7 @@ class ViewController: NSViewController {
     }
     
 
-    func chooseImage(){
+    @objc func chooseImage(){
         let picTaker = IKPictureTaker.pictureTaker();
         picTaker?.setValue(false, forKey: IKPictureTakerAllowsEditingKey);
         picTaker?.setValue(false, forKey: IKPictureTakerRemainOpenAfterValidateKey);
@@ -47,7 +47,7 @@ class ViewController: NSViewController {
         picTaker?.begin(withDelegate: self, didEnd: #selector(pictureTakerDidEnd(_:returnCode:contextInfo:)), contextInfo: nil);
     }
     
-    func pictureTakerDidEnd(_ picker: IKPictureTaker, returnCode: NSInteger, contextInfo: UnsafeRawPointer) {
+    @objc func pictureTakerDidEnd(_ picker: IKPictureTaker, returnCode: NSInteger, contextInfo: UnsafeRawPointer) {
         
         if let image = picker.outputImage(){
             self.selectImageView.image = image;
@@ -55,7 +55,7 @@ class ViewController: NSViewController {
         }
     }
     
-    func choosePath(){
+    @objc func choosePath(){
         let panel = NSOpenPanel();
         panel.message = "选择导出路径";
         panel.prompt = "确定";
@@ -64,7 +64,7 @@ class ViewController: NSViewController {
         panel.canCreateDirectories = true;
         panel.allowsMultipleSelection = false;
         let result = panel.runModal();
-        if(result == NSFileHandlingPanelOKButton){
+        if(result.rawValue == NSFileHandlingPanelOKButton){
             let path = panel.url!.path;
             self.exportTextField.stringValue = path;
             let userDefault = UserDefaults.standard;
@@ -73,7 +73,7 @@ class ViewController: NSViewController {
         }
     }
     
-    func exportImage(){
+    @objc func exportImage(){
         
         if(self.isSelectImage){
             if let image = self.selectImageView.image{
@@ -96,7 +96,7 @@ class ViewController: NSViewController {
                     }
                     
                     let alert = NSAlert();
-                    alert.alertStyle = NSAlertStyle.informational;
+                    alert.alertStyle = NSAlert.Style.informational;
                     alert.messageText = "导出完成！";
                     alert.runModal();
 
@@ -108,7 +108,7 @@ class ViewController: NSViewController {
             
         }else{
             let alert = NSAlert();
-            alert.alertStyle = NSAlertStyle.informational;
+            alert.alertStyle = NSAlert.Style.informational;
             alert.messageText = "图片不能为空！";
             alert.runModal();
         }
@@ -116,22 +116,22 @@ class ViewController: NSViewController {
     
     
     func saveFile(_ image:NSImage,exportPath:String,type:String,fileName:String){
-        let scale = NSScreen.main()!.backingScaleFactor;
+        let scale = NSScreen.main!.backingScaleFactor;
         let width:Int =  Int(image.size.width) * Int(scale);
         let height:Int = Int(image.size.height) * Int(scale);
         if(type == "png"){
             image.lockFocus();
             let bits = NSBitmapImageRep(focusedViewRect: NSMakeRect(0, 0, image.size.width, image.size.width));
             image.unlockFocus();
-            let imageProps = [NSImageCompressionFactor:0];
-            let imageData = bits?.representation(using: NSBitmapImageFileType.PNG, properties: imageProps);
+            let imageProps = [NSBitmapImageRep.PropertyKey.compressionFactor:0];
+            let imageData = bits?.representation(using: NSBitmapImageRep.FileType.png, properties: imageProps);
             try? imageData?.write(to: URL(fileURLWithPath: "\(exportPath)/\(fileName)_\(width)x\(height).\(type)"), options: [.atomic]);
         }else if(type == "jpg"){
             image.lockFocus();
             let bits = NSBitmapImageRep(focusedViewRect: NSMakeRect(0, 0, image.size.width, image.size.width));
             image.unlockFocus();
-            let imageProps = [NSImageCompressionFactor:0.8];
-            let imageData = bits?.representation(using: NSBitmapImageFileType.JPEG, properties: imageProps);
+            let imageProps = [NSBitmapImageRep.PropertyKey.compressionFactor:0.8];
+            let imageData = bits?.representation(using: NSBitmapImageRep.FileType.jpeg, properties: imageProps);
             try? imageData?.write(to: URL(fileURLWithPath: "\(exportPath)/\(fileName)_\(width)x\(height).\(type)"), options: [.atomic]);
         }
     }
@@ -143,7 +143,7 @@ class ViewController: NSViewController {
             }
         }
         
-        let scale = NSScreen.main()!.backingScaleFactor;
+        let scale = NSScreen.main!.backingScaleFactor;
         let ptSize = NSSize(width: newSize.width/scale, height: newSize.height/scale);
         
         let oldRect = NSMakeRect(0.0, 0.0, sourceImage.size.width, sourceImage.size.height);
