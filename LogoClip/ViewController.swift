@@ -15,9 +15,9 @@ class ViewController: NSViewController {
     @IBOutlet weak var exportButton: NSButton!
     @IBOutlet weak var exportTextField: NSTextField!
     @IBOutlet weak var choosePathButton: NSButton!
-
+    
     @IBOutlet weak var sizeTextField: NSTextField!
-
+    
     
     var isSelectImage = false;
     override func viewDidLoad() {
@@ -27,7 +27,7 @@ class ViewController: NSViewController {
         exportButton.action = #selector(exportImage);
         choosePathButton.action = #selector(choosePath);
         self.exportTextField.isEditable = false;
-
+        
         let userDefault = UserDefaults.standard;
         if let exportPath = userDefault.string(forKey: "exportPath"){
             exportTextField.stringValue = exportPath;
@@ -38,7 +38,7 @@ class ViewController: NSViewController {
         }
     }
     
-
+    
     @objc func chooseImage(){
         let picTaker = IKPictureTaker.pictureTaker();
         picTaker?.setValue(false, forKey: IKPictureTakerAllowsEditingKey);
@@ -99,7 +99,7 @@ class ViewController: NSViewController {
                     alert.alertStyle = NSAlert.Style.informational;
                     alert.messageText = "导出完成！";
                     alert.runModal();
-
+                    
                     let userDefault = UserDefaults.standard;
                     userDefault.set(self.sizeTextField.stringValue, forKey: "sizeValue");
                 }
@@ -135,15 +135,16 @@ class ViewController: NSViewController {
             try? imageData?.write(to: URL(fileURLWithPath: "\(exportPath)/\(fileName)_\(width)x\(height).\(type)"), options: [.atomic]);
         }
     }
-
+    
     func resizeImage(_ sourceImage:NSImage,newSize:NSSize)->NSImage{
+        let scale = NSScreen.main!.backingScaleFactor;
         if(sourceImage.isValid){
-            if (sourceImage.size.width == newSize.width && sourceImage.size.height == newSize.height) {
+            if (sourceImage.size.width*scale == newSize.width) {
                 return sourceImage;
             }
         }
         
-        let scale = NSScreen.main!.backingScaleFactor;
+        
         let ptSize = NSSize(width: newSize.width/scale, height: newSize.height/scale);
         
         let oldRect = NSMakeRect(0.0, 0.0, sourceImage.size.width, sourceImage.size.height);
@@ -155,6 +156,6 @@ class ViewController: NSViewController {
         newImage.unlockFocus();
         return newImage;
     }
-
+    
 }
 
