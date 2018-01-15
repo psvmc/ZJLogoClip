@@ -19,7 +19,7 @@
 /* Begin PBXFileReference section */
 		3F7CBAD11DC6CF4800EBCA8A /* ZJ_StringUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ZJ_StringUtils.swift; path = LogoClip/Lib/ZJ_StringUtils.swift; sourceTree = SOURCE_ROOT; };
 		3F88A76C1D7EFC0C0066F6F6 /* MainWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
-		3F9272021D7E4BC50065A9C3 /* APP Logo生成器.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "APP Logo生成器.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F9272021D7E4BC50065A9C3 /* ZLogo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ZLogo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9272051D7E4BC50065A9C3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F9272071D7E4BC50065A9C3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3F9272091D7E4BC50065A9C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 		3F9272031D7E4BC50065A9C3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3F9272021D7E4BC50065A9C3 /* APP Logo生成器.app */,
+				3F9272021D7E4BC50065A9C3 /* ZLogo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,9 +90,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3F9272011D7E4BC50065A9C3 /* APP Logo生成器 */ = {
+		3F9272011D7E4BC50065A9C3 /* ZLogo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3F9272271D7E4BC50065A9C3 /* Build configuration list for PBXNativeTarget "APP Logo生成器" */;
+			buildConfigurationList = 3F9272271D7E4BC50065A9C3 /* Build configuration list for PBXNativeTarget "ZLogo" */;
 			buildPhases = (
 				3F9271FE1D7E4BC50065A9C3 /* Sources */,
 				3F9271FF1D7E4BC50065A9C3 /* Frameworks */,
@@ -102,9 +102,9 @@
 			);
 			dependencies = (
 			);
-			name = "APP Logo生成器";
+			name = "ZLogo";
 			productName = LogoClip;
-			productReference = 3F9272021D7E4BC50065A9C3 /* APP Logo生成器.app */;
+			productReference = 3F9272021D7E4BC50065A9C3 /* ZLogo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -136,7 +136,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3F9272011D7E4BC50065A9C3 /* APP Logo生成器 */,
+				3F9272011D7E4BC50065A9C3 /* ZLogo */,
 			);
 		};
 /* End PBXProject section */
@@ -319,7 +319,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3F9272271D7E4BC50065A9C3 /* Build configuration list for PBXNativeTarget "APP Logo生成器" */ = {
+		3F9272271D7E4BC50065A9C3 /* Build configuration list for PBXNativeTarget "ZLogo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3F9272281D7E4BC50065A9C3 /* Debug */,

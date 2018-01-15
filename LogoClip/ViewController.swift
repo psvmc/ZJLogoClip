@@ -119,6 +119,14 @@ class ViewController: NSViewController {
         let scale = NSScreen.main!.backingScaleFactor;
         let width:Int =  Int(image.size.width) * Int(scale);
         let height:Int = Int(image.size.height) * Int(scale);
+        let fm = FileManager.default
+        if(!fm.fileExists(atPath: exportPath)){
+            do{
+                try fm.createDirectory(atPath: exportPath, withIntermediateDirectories: true, attributes: nil)
+            }catch{
+                
+            }
+        }
         if(type == "png"){
             image.lockFocus();
             let bits = NSBitmapImageRep(focusedViewRect: NSMakeRect(0, 0, image.size.width, image.size.width));

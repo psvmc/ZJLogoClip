@@ -68,17 +68,17 @@
             <objects>
                 <viewController title="Logo Clip" id="XfG-lQ-9wD" customClass="ViewController" customModule="APP_Logo生成器" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="474"/>
+                        <rect key="frame" x="0.0" y="0.0" width="260" height="484"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="nmD-zR-bta">
-                                <rect key="frame" x="0.0" y="314" width="320" height="140"/>
+                                <rect key="frame" x="0.0" y="324" width="260" height="140"/>
                                 <subviews>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="lnk-ps-anJ">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="140"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
                                         <subviews>
                                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9en-tn-jRb">
-                                                <rect key="frame" x="40" y="10" width="120" height="120"/>
+                                                <rect key="frame" x="10" y="10" width="120" height="120"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="120" id="963-2U-gjb"/>
                                                     <constraint firstAttribute="width" constant="120" id="u8a-Gg-aQT"/>
@@ -87,16 +87,16 @@
                                             </imageView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="200" id="2Am-lW-2Mp"/>
+                                            <constraint firstAttribute="width" constant="140" id="2Am-lW-2Mp"/>
                                             <constraint firstItem="9en-tn-jRb" firstAttribute="centerY" secondItem="lnk-ps-anJ" secondAttribute="centerY" id="H01-tX-FFC"/>
                                             <constraint firstItem="9en-tn-jRb" firstAttribute="centerX" secondItem="lnk-ps-anJ" secondAttribute="centerX" id="fjc-I6-yAW"/>
                                         </constraints>
                                     </customView>
                                     <box horizontalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="U0D-0P-olE">
-                                        <rect key="frame" x="197" y="0.0" width="5" height="140"/>
+                                        <rect key="frame" x="137" y="0.0" width="5" height="140"/>
                                     </box>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nUJ-Il-rVc">
-                                        <rect key="frame" x="210" y="19" width="100" height="101"/>
+                                        <rect key="frame" x="150" y="19" width="100" height="101"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="M8Y-RP-tWl"/>
                                             <constraint firstAttribute="width" constant="100" id="tGB-ct-0qq"/>
@@ -121,19 +121,19 @@
                                 </constraints>
                             </customView>
                             <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="GrB-EQ-yus">
-                                <rect key="frame" x="0.0" y="311" width="320" height="5"/>
+                                <rect key="frame" x="0.0" y="321" width="260" height="5"/>
                             </box>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="L2N-2t-XEu">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="314"/>
+                                <rect key="frame" x="0.0" y="0.0" width="260" height="324"/>
                                 <subviews>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="l0w-lf-pf2">
-                                        <rect key="frame" x="0.0" y="50" width="320" height="264"/>
+                                        <rect key="frame" x="0.0" y="50" width="260" height="274"/>
                                         <subviews>
                                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="dLR-EF-Txt">
-                                                <rect key="frame" x="0.0" y="73" width="320" height="191"/>
+                                                <rect key="frame" x="0.0" y="73" width="260" height="201"/>
                                                 <subviews>
                                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jW2-yp-zdt">
-                                                        <rect key="frame" x="0.0" y="191" width="320" height="0.0"/>
+                                                        <rect key="frame" x="0.0" y="201" width="260" height="0.0"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" id="R81-FX-1M5"/>
                                                         </constraints>
@@ -144,7 +144,7 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Rru-uc-3tR">
-                                                        <rect key="frame" x="8" y="154" width="304" height="17"/>
+                                                        <rect key="frame" x="8" y="164" width="244" height="17"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="导出logo的大小和格式" id="kg9-Tt-uua">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -152,9 +152,9 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="1xN-at-71W">
-                                                        <rect key="frame" x="10" y="64" width="300" height="80"/>
+                                                        <rect key="frame" x="10" y="64" width="240" height="90"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="80" id="I6Q-Od-RvV"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="I6Q-Od-RvV"/>
                                                         </constraints>
                                                         <textFieldCell key="cell" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="wid-Ij-jlJ">
                                                             <font key="font" metaFont="system"/>
@@ -164,7 +164,7 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="J9m-zn-zRo">
-                                                        <rect key="frame" x="10" y="20" width="300" height="34"/>
+                                                        <rect key="frame" x="10" y="20" width="240" height="34"/>
                                                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="格式类似于x64.png 数值单位为px 多种尺寸用,分割 后缀必须为png或jpg" id="Ell-Vb-Sdr">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="scrollBarColor" catalog="System" colorSpace="catalog"/>
@@ -189,13 +189,13 @@
                                                 </constraints>
                                             </customView>
                                             <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="o3W-K8-Y7P">
-                                                <rect key="frame" x="0.0" y="70" width="320" height="5"/>
+                                                <rect key="frame" x="0.0" y="70" width="260" height="5"/>
                                             </box>
                                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="hXx-Hv-XGA">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="260" height="72"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DKX-tb-CKa">
-                                                        <rect key="frame" x="8" y="42" width="304" height="20"/>
+                                                        <rect key="frame" x="8" y="42" width="244" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="7JN-Wu-vHK"/>
                                                         </constraints>
@@ -206,7 +206,7 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KMT-8w-ulV">
-                                                        <rect key="frame" x="10" y="10" width="226" height="26"/>
+                                                        <rect key="frame" x="10" y="10" width="166" height="26"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="26" id="6xI-6n-BW1"/>
                                                         </constraints>
@@ -217,9 +217,10 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uFW-iq-r9K">
-                                                        <rect key="frame" x="241" y="10" width="69" height="25"/>
+                                                        <rect key="frame" x="181" y="10" width="69" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="24" id="1Vh-SZ-TyZ"/>
+                                                            <constraint firstAttribute="width" constant="69" id="XT2-WL-f8Y"/>
                                                         </constraints>
                                                         <buttonCell key="cell" type="inline" title="选择文件夹" bezelStyle="inline" alignment="center" borderStyle="border" inset="2" id="QxN-3g-bGo">
                                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -254,10 +255,10 @@
                                         </constraints>
                                     </customView>
                                     <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="r7J-cB-i6I">
-                                        <rect key="frame" x="0.0" y="48" width="320" height="4"/>
+                                        <rect key="frame" x="0.0" y="48" width="260" height="4"/>
                                     </box>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="AuO-vC-0Sf">
-                                        <rect key="frame" x="10" y="9" width="300" height="31"/>
+                                        <rect key="frame" x="10" y="9" width="240" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="ah3-lJ-HIC"/>
                                         </constraints>
