@@ -122,25 +122,31 @@ class ViewController: NSViewController {
         let fm = FileManager.default
         if(!fm.fileExists(atPath: exportPath)){
             do{
-                try fm.createDirectory(atPath: exportPath, withIntermediateDirectories: true, attributes: nil)
+                try fm.createDirectory(
+                    atPath: exportPath,
+                    withIntermediateDirectories: true,
+                    attributes: nil
+                )
             }catch{
                 
             }
         }
         if(type == "png"){
             image.lockFocus();
-            let bits = NSBitmapImageRep(focusedViewRect: NSMakeRect(0, 0, image.size.width, image.size.width));
+            let bits = NSBitmapImageRep(
+                focusedViewRect: NSMakeRect(0, 0, image.size.width, image.size.width)
+            );
             image.unlockFocus();
             let imageProps = [NSBitmapImageRep.PropertyKey.compressionFactor:0];
             let imageData = bits?.representation(using: NSBitmapImageRep.FileType.png, properties: imageProps);
-            try? imageData?.write(to: URL(fileURLWithPath: "\(exportPath)/\(fileName)_\(width)x\(height).\(type)"), options: [.atomic]);
+            ((try? imageData?.write(to: URL(fileURLWithPath: "\(exportPath)/\(fileName)_\(width)x\(height).\(type)"), options: [.atomic])) as ()??);
         }else if(type == "jpg"){
             image.lockFocus();
             let bits = NSBitmapImageRep(focusedViewRect: NSMakeRect(0, 0, image.size.width, image.size.width));
             image.unlockFocus();
             let imageProps = [NSBitmapImageRep.PropertyKey.compressionFactor:0.8];
             let imageData = bits?.representation(using: NSBitmapImageRep.FileType.jpeg, properties: imageProps);
-            try? imageData?.write(to: URL(fileURLWithPath: "\(exportPath)/\(fileName)_\(width)x\(height).\(type)"), options: [.atomic]);
+            ((try? imageData?.write(to: URL(fileURLWithPath: "\(exportPath)/\(fileName)_\(width)x\(height).\(type)"), options: [.atomic])) as ()??);
         }
     }
     

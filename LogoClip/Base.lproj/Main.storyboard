@@ -40,7 +40,7 @@
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="ZLogo" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-113.5" y="-69"/>
+            <point key="canvasLocation" x="16" y="-132"/>
         </scene>
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
@@ -61,18 +61,18 @@
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-99" y="281"/>
+            <point key="canvasLocation" x="151" y="260"/>
         </scene>
         <!--Logo Clip-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController title="Logo Clip" id="XfG-lQ-9wD" customClass="ViewController" customModule="ZLogo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="450" height="467"/>
+                        <rect key="frame" x="0.0" y="0.0" width="260" height="554"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="nmD-zR-bta">
-                                <rect key="frame" x="0.0" y="307" width="450" height="140"/>
+                                <rect key="frame" x="0.0" y="394" width="260" height="140"/>
                                 <subviews>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="lnk-ps-anJ">
                                         <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
@@ -96,8 +96,9 @@
                                         <rect key="frame" x="137" y="0.0" width="5" height="140"/>
                                     </box>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nUJ-Il-rVc">
-                                        <rect key="frame" x="150" y="19" width="290" height="101"/>
+                                        <rect key="frame" x="150" y="19" width="100" height="101"/>
                                         <constraints>
+                                            <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="3A9-le-7Ij"/>
                                             <constraint firstAttribute="height" constant="100" id="M8Y-RP-tWl"/>
                                         </constraints>
                                         <buttonCell key="cell" type="inline" title="选择图片" bezelStyle="inline" image="buttonCell:uO9-dr-yYb:image" imagePosition="overlaps" alignment="center" borderStyle="border" baseWritingDirection="leftToRight" inset="2" id="uO9-dr-yYb">
@@ -120,19 +121,19 @@
                                 </constraints>
                             </customView>
                             <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="GrB-EQ-yus">
-                                <rect key="frame" x="0.0" y="304" width="450" height="5"/>
+                                <rect key="frame" x="0.0" y="391" width="260" height="5"/>
                             </box>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="L2N-2t-XEu">
-                                <rect key="frame" x="0.0" y="0.0" width="450" height="307"/>
+                                <rect key="frame" x="0.0" y="0.0" width="260" height="394"/>
                                 <subviews>
                                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="l0w-lf-pf2">
-                                        <rect key="frame" x="0.0" y="50" width="450" height="257"/>
+                                        <rect key="frame" x="0.0" y="120" width="260" height="274"/>
                                         <subviews>
                                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="dLR-EF-Txt">
-                                                <rect key="frame" x="0.0" y="73" width="450" height="184"/>
+                                                <rect key="frame" x="0.0" y="73" width="260" height="201"/>
                                                 <subviews>
                                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jW2-yp-zdt">
-                                                        <rect key="frame" x="0.0" y="184" width="450" height="0.0"/>
+                                                        <rect key="frame" x="0.0" y="201" width="260" height="0.0"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" id="R81-FX-1M5"/>
                                                         </constraints>
@@ -143,7 +144,7 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Rru-uc-3tR">
-                                                        <rect key="frame" x="8" y="147" width="434" height="17"/>
+                                                        <rect key="frame" x="8" y="164" width="244" height="17"/>
                                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="导出logo的大小和格式" id="kg9-Tt-uua">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -151,7 +152,7 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="1xN-at-71W">
-                                                        <rect key="frame" x="10" y="47" width="430" height="90"/>
+                                                        <rect key="frame" x="10" y="64" width="240" height="90"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="90" id="I6Q-Od-RvV"/>
                                                         </constraints>
@@ -163,7 +164,7 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="J9m-zn-zRo">
-                                                        <rect key="frame" x="10" y="20" width="430" height="17"/>
+                                                        <rect key="frame" x="10" y="20" width="240" height="34"/>
                                                         <textFieldCell key="cell" sendsActionOnEndEditing="YES" title="格式类似于x64.png 数值单位为px 多种尺寸用,分割 后缀必须为png或jpg" id="Ell-Vb-Sdr">
                                                             <font key="font" metaFont="system"/>
                                                             <color key="textColor" name="scrollBarColor" catalog="System" colorSpace="catalog"/>
@@ -188,13 +189,13 @@
                                                 </constraints>
                                             </customView>
                                             <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="o3W-K8-Y7P">
-                                                <rect key="frame" x="0.0" y="70" width="450" height="5"/>
+                                                <rect key="frame" x="0.0" y="70" width="260" height="5"/>
                                             </box>
                                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="hXx-Hv-XGA">
-                                                <rect key="frame" x="0.0" y="0.0" width="450" height="72"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="260" height="72"/>
                                                 <subviews>
                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DKX-tb-CKa">
-                                                        <rect key="frame" x="8" y="42" width="434" height="20"/>
+                                                        <rect key="frame" x="8" y="42" width="244" height="20"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="20" id="7JN-Wu-vHK"/>
                                                         </constraints>
@@ -205,7 +206,7 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KMT-8w-ulV">
-                                                        <rect key="frame" x="10" y="10" width="356" height="26"/>
+                                                        <rect key="frame" x="10" y="10" width="166" height="26"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="26" id="6xI-6n-BW1"/>
                                                         </constraints>
@@ -216,7 +217,7 @@
                                                         </textFieldCell>
                                                     </textField>
                                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uFW-iq-r9K">
-                                                        <rect key="frame" x="371" y="10" width="69" height="25"/>
+                                                        <rect key="frame" x="181" y="10" width="69" height="25"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="24" id="1Vh-SZ-TyZ"/>
                                                         </constraints>
@@ -253,10 +254,10 @@
                                         </constraints>
                                     </customView>
                                     <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="r7J-cB-i6I">
-                                        <rect key="frame" x="0.0" y="48" width="450" height="4"/>
+                                        <rect key="frame" x="0.0" y="118" width="260" height="4"/>
                                     </box>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="AuO-vC-0Sf">
-                                        <rect key="frame" x="10" y="9" width="430" height="31"/>
+                                        <rect key="frame" x="10" y="79" width="240" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="ah3-lJ-HIC"/>
                                         </constraints>
@@ -265,16 +266,25 @@
                                             <font key="font" metaFont="smallSystemBold"/>
                                         </buttonCell>
                                     </button>
+                                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="1FJ-6u-8t0" customClass="DragDestinationView" customModule="ZLogo" customModuleProvider="target">
+                                        <rect key="frame" x="100" y="10" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="3GE-uB-qZ6"/>
+                                            <constraint firstAttribute="width" constant="60" id="kdp-tj-uxj"/>
+                                        </constraints>
+                                    </customView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="AuO-vC-0Sf" secondAttribute="bottom" constant="10" id="1OJ-6o-gx6"/>
+                                    <constraint firstItem="1FJ-6u-8t0" firstAttribute="centerX" secondItem="L2N-2t-XEu" secondAttribute="centerX" id="0Mz-8d-bft"/>
                                     <constraint firstItem="r7J-cB-i6I" firstAttribute="top" secondItem="l0w-lf-pf2" secondAttribute="bottom" id="BhY-O9-WMa"/>
                                     <constraint firstItem="AuO-vC-0Sf" firstAttribute="leading" secondItem="L2N-2t-XEu" secondAttribute="leading" constant="10" id="CSM-7i-Iea"/>
+                                    <constraint firstItem="1FJ-6u-8t0" firstAttribute="top" secondItem="AuO-vC-0Sf" secondAttribute="bottom" constant="10" id="EXS-ZZ-C3t"/>
                                     <constraint firstAttribute="trailing" secondItem="r7J-cB-i6I" secondAttribute="trailing" id="JdQ-pD-pe3"/>
                                     <constraint firstAttribute="trailing" secondItem="l0w-lf-pf2" secondAttribute="trailing" id="K8E-dp-hPz"/>
                                     <constraint firstAttribute="trailing" secondItem="AuO-vC-0Sf" secondAttribute="trailing" constant="10" id="Sia-Ys-bzp"/>
                                     <constraint firstItem="AuO-vC-0Sf" firstAttribute="top" secondItem="r7J-cB-i6I" secondAttribute="bottom" constant="10" id="YS1-h8-2os"/>
                                     <constraint firstItem="l0w-lf-pf2" firstAttribute="top" secondItem="L2N-2t-XEu" secondAttribute="top" id="i3x-Pt-pg2"/>
+                                    <constraint firstAttribute="bottom" secondItem="1FJ-6u-8t0" secondAttribute="bottom" constant="10" id="lWF-ef-VXu"/>
                                     <constraint firstItem="AuO-vC-0Sf" firstAttribute="top" secondItem="l0w-lf-pf2" secondAttribute="bottom" constant="10" id="qUa-3K-0T1"/>
                                     <constraint firstItem="l0w-lf-pf2" firstAttribute="leading" secondItem="L2N-2t-XEu" secondAttribute="leading" id="tGA-sa-HfH"/>
                                     <constraint firstItem="r7J-cB-i6I" firstAttribute="leading" secondItem="L2N-2t-XEu" secondAttribute="leading" id="u1Q-Bv-Q2k"/>
@@ -306,7 +316,7 @@
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="x2n-5B-CiA"/>
             </objects>
-            <point key="canvasLocation" x="394.5" y="299.5"/>
+            <point key="canvasLocation" x="611" y="260"/>
         </scene>
     </scenes>
     <resources>
